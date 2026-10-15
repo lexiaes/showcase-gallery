@@ -1,6 +1,6 @@
 import {useState, useMemo} from "react";
 import ProductGrid from "../components/ProductGrid";
-import ProductModal from "../components/ProductModal";
+
 
 function GalleryPage({ products, loading }){
     const [searchTerm, setSearchTerm] = useState("");
@@ -68,11 +68,7 @@ function GalleryPage({ products, loading }){
                 />
             )}
 
-            <ProductModal 
-                product={selectedProduct} 
-                isOpen={!!selectedProduct} 
-                onClose={() => setSelectedProduct(null)} 
-            />
+           
         </main>
     );
 }
