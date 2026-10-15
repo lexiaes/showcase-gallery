@@ -5,7 +5,7 @@ const connectDB = async () => {
         const uri = (process.env.MONGO_URI || process.env.MONGODB_URI || "")
             .trim()
             .replace(/^["']|["']$/g, "");
-        // Redacted so credentials never reach the logs.
+        
         console.log("Connecting to:", uri.replace(/\/\/.*@/, "//***@"));
         await mongoose.connect(uri);
         console.log("MongoDB Atlas connected!");
