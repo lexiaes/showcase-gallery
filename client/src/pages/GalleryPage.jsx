@@ -67,7 +67,11 @@ function GalleryPage({ products, loading }){
                 />
             )}
 
-            
+            <ProductModal 
+                product={selectedProduct} 
+                isOpen={!!selectedProduct} 
+                onClose={() => setSelectedProduct(null)} 
+            />
         </main>
     );
 }
